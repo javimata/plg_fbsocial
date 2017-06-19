@@ -9,6 +9,11 @@
 	<authorUrl>www.javimata.com</authorUrl>
 	<version>1.0.0</version>
 	<description>Facebook Share Plugin</description>
+
+    <updateservers>
+        <server type="extension" name="Facebook Share Plugin" priority="1">http://updates.javimata.com/plg_fbsocial_update.xml</server>
+    </updateservers>
+
 	<files>
 		<filename plugin="fbsocial">fbsocial.php</filename>
 	</files>
