@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="content" method="upgrade">
+	<name>Facebook Share Plugin</name>
+	<author>@Javi_Mata</author>
+	<creationDate>June 2017</creationDate>
+	<copyright>Copyright (C) 2017 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>javimata@gmail.com</authorEmail>
+	<authorUrl>www.javimata.com</authorUrl>
+	<version>1.0.0</version>
+	<description>Facebook Share Plugin</description>
+	<files>
+		<filename plugin="fbsocial">fbsocial.php</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="app_id" type="text" default="" label="App Id" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>
