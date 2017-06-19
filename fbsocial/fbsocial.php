@@ -9,26 +9,10 @@
 
 defined('_JEXEC') or die();
 
-/**
- * Plug-in to show a custom field in eg an article
- * This uses the {fields ID} syntax
- *
- * @since  3.7.0
- */
+
 class PlgContentFbsocial extends JPlugin
 {
-	/**
-	 * Plugin that shows a custom field
-	 *
-	 * @param   string  $context  The context of the content being passed to the plugin.
-	 * @param   object  &$item    The item object.  Note $article->text is also available
-	 * @param   object  &$params  The article params
-	 * @param   int     $page     The 'page' number
-	 *
-	 * @return void
-	 *
-	 * @since  3.7.0
-	 */
+
 	public function onContentAfterDisplay($context, &$article, &$params, $limitstart)
 	{
 
@@ -51,8 +35,6 @@ class PlgContentFbsocial extends JPlugin
 				$article_image 	= $article_images->image_introtext;				
 			}
 
-			// print_r($article);
-
 			$document = JFactory::getDocument();
 
 			if ( $app_id ) {
@@ -70,8 +52,6 @@ class PlgContentFbsocial extends JPlugin
 			}
 
 		}
-
-		// print_r($params);
 
 	}
 }
