@@ -29,12 +29,6 @@ class PlgSystemFbsocialog extends JPlugin
 
 		$document->addCustomTag('<meta property="fb:app_id" content="'.$app_id.'" />');
 
-		$ip = $_SERVER['REMOTE_ADDR'];
-		if ( $ip=="187.188.50.48" ):
-			//print_r($this);
-        endif;
-
-
   	}
 
 	public function onContentAfterDisplay($context, &$article, &$params, $limitstart)
