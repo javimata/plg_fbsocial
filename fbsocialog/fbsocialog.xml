@@ -7,7 +7,7 @@
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
 	<authorEmail>javimata@gmail.com</authorEmail>
 	<authorUrl>www.javimata.com</authorUrl>
-	<version>1.0.0</version>
+	<version>1.0.2</version>
 	<description>Add metatags OG for Facebook Open Graphs and App id</description>
 
     <updateservers>
@@ -19,9 +19,15 @@
 	</files>
 	<config>
 		<fields name="params">
+
 			<fieldset name="basic">
+
 				<field name="app_id" type="text" default="" label="App Id" />
+
+				<field name="fb_page" type="text" default="" label="Facebook Page ID" />
+
 			</fieldset>
+
 		</fields>
 	</config>
 </extension>

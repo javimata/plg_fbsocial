@@ -13,12 +13,11 @@ defined('_JEXEC') or die();
 class PlgSystemFbsocialog extends JPlugin
 {
 
-
 	public function onAfterDispatch()
   	{
 
+  		// Check if are in the admin section and skip else continue
 		$app  = JFactory::getApplication();
-
 		if ($app->isClient('administrator'))
 		{
 			return;
@@ -26,8 +25,15 @@ class PlgSystemFbsocialog extends JPlugin
 
 		$document = JFactory::getDocument();
 		$app_id   = $this->params->get('app_id');
+		$fb_page  = $this->params->get('fb_page');
 
-		$document->addCustomTag('<meta property="fb:app_id" content="'.$app_id.'" />');
+		if ( $app_id ) {
+			$document->addCustomTag('<meta property="fb:app_id" content="'.$app_id.'" />');
+		}
+
+		if ( $fb_page ) {
+			$document->addCustomTag('<meta property="fb:pages" content="'.$fb_page.'" />');
+		}
 
   	}
 
@@ -40,7 +46,7 @@ class PlgSystemFbsocialog extends JPlugin
 			return;
 		}
 
-
+		// Add info in the OG metatag if are in the component content
 		if ( $context == 'com_content.article' )
 		{
 
