@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="system" method="upgrade">
+	<name>Plugin Facebook SocialOG</name>
+	<author>@Javi_Mata</author>
+	<creationDate>June 2017</creationDate>
+	<copyright>Copyright (C) 2017 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>javimata@gmail.com</authorEmail>
+	<authorUrl>www.javimata.com</authorUrl>
+	<version>1.0.0</version>
+	<description>Add metatags OG for Facebook Open Graphs and App id</description>
+
+    <updateservers>
+        <server type="extension" name="Plugin Facebook SocialOG" priority="1">http://updates.javimata.com/plg_fbsocialog_update.xml</server>
+    </updateservers>
+
+	<files>
+		<filename plugin="fbsocialog">fbsocialog.php</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="app_id" type="text" default="" label="App Id" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>
